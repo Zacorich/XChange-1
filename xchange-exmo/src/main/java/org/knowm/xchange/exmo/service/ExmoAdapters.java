@@ -60,7 +60,7 @@ public class ExmoAdapters {
         .last(new BigDecimal(data.get("last_trade")))
         .low(new BigDecimal(data.get("low")))
         .volume(new BigDecimal(data.get("vol")))
-        .timestamp(DateUtils.fromMillisUtc(Long.valueOf(data.get("updated"))))
+        .timestamp(DateUtils.fromMillisUtc(Long.valueOf(data.get("updated")) * 1000L))
         .build();
   }
 

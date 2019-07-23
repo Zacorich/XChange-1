@@ -31,7 +31,7 @@ public interface Exmo {
   @Path("/pair_settings")
   Map<String, Map<String, String>> pairSettings() throws IOException;
 
-  @POST
+  @GET
   @Path("/order_book/")
   Map<String, Map<String, Object>> orderBook(@FormParam("pair") String pair) throws IOException;
 
